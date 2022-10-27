@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Runtime.InteropServices.JavaScript;
 
 namespace LongestCommonPrefixCsharp
 {
@@ -7,19 +6,27 @@ namespace LongestCommonPrefixCsharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             LongestCommonPrefix(new string[] { "flower", "flow", "flight" });
         }
 
         public static string LongestCommonPrefix(string[] strs)
         {
-            var minLength = strs.Min(x => x.Length);
-            // Maximum length of common prefix will be minLength;
-            for(int i = 0; i < minLength; i++)
+            if (strs.Length == 0)
+                return null;
+            else if (strs.Length == 1)
             {
+                return strs[0];
+            }
+            else
+            {
+                string common = strs[0];
+                foreach (string str in strs)
+                {
 
+                }
             }
             return string.Empty;
         }
     }
 }
+//
