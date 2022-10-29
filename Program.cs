@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices.JavaScript;
-
+﻿
 namespace LongestCommonPrefixCsharp
 {
     class Program
@@ -19,11 +18,12 @@ namespace LongestCommonPrefixCsharp
             }
             else
             {
-                string common = strs[0];
-                foreach (string str in strs)
-                {
+                var minLength = strs.Min(x => x.Length);
+                string common = string.Empty;
+                //for(int i =0;i<minLength;i++)
+                //{
 
-                }
+                //}
             }
             return string.Empty;
         }
